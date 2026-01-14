@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "project1-chevachin-gleb-m25-555"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "A simple console game"
+authors = ["Gleb Chevachin <you@example.com>"]
 readme = "README.md"
 packages = [
  { include = "labyrinth_game" },

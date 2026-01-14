@@ -1,7 +1,6 @@
 import math
 
 from labyrinth_game.constants import COMMANDS, ROOMS
-from labyrinth_game.player_actions import get_input
 
 
 def pseudo_random(seed: int, modulo: int) -> int:
@@ -72,6 +71,7 @@ def describe_current_room(game_state: dict) -> None:
 
 def solve_puzzle(game_state: dict) -> None:
     room = ROOMS[game_state["current_room"]]
+    from labyrinth_game.player_actions import get_input
 
     if room["puzzle"] is None:
         print("Загадок здесь нет.")
@@ -111,6 +111,7 @@ def solve_puzzle(game_state: dict) -> None:
 def attempt_open_treasure(game_state: dict) -> None:
     room = ROOMS["treasure_room"]
     inventory = game_state["player_inventory"]
+    from labyrinth_game.player_actions import get_input
 
     if "treasure_key" in inventory:
         print("Вы применяете ключ, и замок щёлкает. Сундук открыт!")
